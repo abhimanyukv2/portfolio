@@ -40,7 +40,8 @@ a:hover {
 }
 
 .content-wrap {
-    width: 800px;
+    max-width: 900px;
+    width: 90%;
     margin: 0 auto;
     padding: 60px 0;
 }
@@ -60,16 +61,33 @@ h2 {
     font-size: 45px;
 }
 
-/* p {
+h3 {
+    margin-bottom: 0;
+}
+
+.item-details h3 + p {
+    font-style: italic;
+}
+
+.item-details h3 ~ p {
     margin: 0;
-} */
+}
+
+.divider > section {
+    border-bottom: 1px dashed #343434;
+    padding: 25px 0;
+}
+
+.divider > section:last-of-type {
+    border-bottom: none;
+}
 
 /* Profile
 *********************************************************** */
 header {
     background-color: #2f3061;
     color: #f7fff7;
-    text-align: center;
+    /* text-align: center; */
 }
 
 header h2 {
@@ -79,7 +97,7 @@ header h2 {
 /* Projects
 *********************************************************** */
 .projects {
-    background: #f7fff7;
+    background: lightblue;
 }
 
 .projects a {
@@ -101,13 +119,6 @@ header h2 {
 
 .project-item {
     overflow: hidden;
-    border-bottom: 1px dashed #343434;
-    padding: 25px 0;
-}
-
-.project-item img {
-    float: left;
-    margin-right: 20px;
 }
 
 .project-item h3 {
@@ -121,11 +132,11 @@ header h2 {
     background: #a1c6d7;
 }
 
-.job-item {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 20px;
+.work-experience {
+    background-image: url("../images/annie-spratt-unsplash.jpg");
+    background-size: cover;
 }
+
 
 /* Research Publicatio 
 ************************************************************ */
@@ -133,9 +144,44 @@ header h2 {
     background: #44BBA4;
 }
 
+.research-publication {
+    background-image: url("../images/sharon-mccutcheon-unsplash.jpg");
+    /* background-size: cover; */
+}
+
+.research-publication a {
+    color: #2f3061;
+}
+
+.research-publication .btn {
+    color: #f7fff7;
+    background: #2f3061;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.research-publication cite {
+    font-weight: 600;
+}
+.research-publication .date {
+    margin: 10px;
+}
+
 
 /* Education
 ************************************************************ */
+.education {
+    background-image: url("../images/joanna-kosinska-unsplash.jpg");
+    background-size: cover;
+    /* background-position: top right; */
+    padding-bottom: 100px;
+}
+
+.education p {
+    width: 60%;
+}
 
 
 /* Contact Info
@@ -143,17 +189,63 @@ header h2 {
 .contact-info {
     background: #343434;
     color: #f7fff7;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .contact-list {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 .contact-list a {
     padding: 15px;
     display: inline-block;
+}
+
+
+/* Responsive 
+************************************************************* */
+
+@media screen and (min-width:750px){
+
+    header, .contact-info {
+        text-align: center;
+    }
+
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .job-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 20px;
+    }
+
+    .contact-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    .education {
+        background-position: top right;
+    }
+}
+
+@media screen and (max-width:749px) {
+    
+    h1 {
+        font-size: 75px;
+        line-height: 0.9;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        line-height: 1;
+    }
+
+    .contact-list a {
+        padding: 5px;
+    }
 }
