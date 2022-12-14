@@ -134,7 +134,7 @@ header h2 {
 }
 
 .work-experience {
-    background-image: url("../images/annie-spratt-unsplash.jpg");
+    background-image: url("https://github.com/abhimanyukv2/protfolio/blob/main/images/annie-spratt-unsplash.jpg");
     background-size: cover;
 }
 
@@ -146,7 +146,7 @@ header h2 {
 }
 
 .research-publication {
-    background-image: url("../images/sharon-mccutcheon-unsplash.jpg");
+    background-image: url("https://github.com/abhimanyukv2/protfolio/blob/main/images/sharon-mccutcheon-unsplash.jpg");
     /* background-size: cover; */
 }
 
@@ -174,7 +174,10 @@ header h2 {
 /* Education
 ************************************************************ */
 .education {
-    background-image: url("../images/joanna-kosinska-unsplash.jpg");
+    background: yellow;
+}
+.education {
+    background-image: url("https://github.com/abhimanyukv2/protfolio/blob/main/images/joanna-kosinska-unsplash.jpg");
     background-size: cover;
     /* background-position: top right; */
     padding-bottom: 100px;
